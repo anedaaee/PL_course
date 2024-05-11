@@ -6,7 +6,7 @@
 (define input_tree2 (node 3 (node 4 (node 7 (node 9 0 0) 0) 0) (node 5 0 0) ))
 
 (define sum_result 0)
-
+(define empty 0)
 (define (illu tree)
  (cond
  ((node? tree)
@@ -45,9 +45,14 @@
     )
 )
 
-(tree_compare input_tree1 input_tree2)
-(display "\n")
-(illu input_tree1)
-(display "\n")
-(illu input_tree2)
-(display "\n")
+;;; (tree_compare input_tree1 input_tree2)
+;;; (display "\n")
+;;; (illu input_tree1)
+;;; (display "\n")
+;;; (illu input_tree2)
+;;; (display "\n")
+(tree_compare (node empty empty empty)  (node empty empty empty))
+(tree_compare (node 1 empty empty) (node 1 empty empty))
+(tree_compare (node 1 (node 2 empty empty) (node 3 (node 4 empty empty) empty)) (node 1 (node 2 empty empty) (node 4 (node 4 empty empty) empty)))
+(tree_compare (node 10 (node 22 empty empty) (node 3 (node 4 empty empty) empty))  (node 10 (node 22 empty empty) (node 4 empty empty)))
+(tree_compare (node 10 (node 2 (node 32 empty empty) (node 1 empty empty)) (node 22 (node 45 empty empty) (node 2 empty empty))) (node 10 (node 2 (node 32 empty empty) (node 1 empty empty)) (node 22 (node 45 empty empty) (node 2 empty empty))))

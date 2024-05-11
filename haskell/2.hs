@@ -7,4 +7,7 @@ rect_number :: Int -> [Int]
 rect_number max =
     rect_number_rec max 1 []
 
-main = print (rect_number 10)
+--main = print (rect_number 0)
+--main = print (rect_number 1)
+--main = print (rect_number 2)
+main = print (rect_number 5)

@@ -20,13 +20,13 @@ gen_prime_rec number index list =
         if (is_prime index) then (gen_prime_rec number (index + 1) (index:list))
         else (gen_prime_rec number (index + 1) (list))
 
-gen_prime :: Int -> [Int]
-gen_prime number = 
-    (gen_prime_rec number 2 [])
+gen_prime :: Int -> Int -> [Int]
+gen_prime number start = 
+    (gen_prime_rec number start [])
 
 
 --main = print (gen_prime 2)
 --main = print (gen_prime 3)
 --main = print (gen_prime 4)
 --main = print (gen_prime 30)
---main = print (gen_prime 100)
+main = print (gen_prime 100 50)

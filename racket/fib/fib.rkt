@@ -15,8 +15,22 @@
   (cond
     ((= n 0) 0)
     ((= n 1) 1)
+    ((= n 2) 1)
     (else (fib_loop 0 1 2 n))
   )
 )
 
-(fib 8)
+(define
+(fib_sum n index)
+  (cond
+    ((= index  n)(fib index))
+    (else (+ (fib index) (fib_sum n (+ index 1))))
+  )
+)
+
+(fib 1)
+(fib 13)
+(fib 2)
+(fib 7)
+(fib_sum 7 0)
+

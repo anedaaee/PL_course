@@ -18,4 +18,17 @@
         (else "two strings must have same length")
     )
 )
-(hamming_distance str1 str2)
+;(hamming_distance str1 str2)
+(hamming_distance "Arthur" "adrian")
+(hamming_distance "martin" "martan")
+(hamming_distance "GTGAG" "GTACG")
+(hamming_distance "asdfghjkl" "asdfghjkl")
+(hamming_distance "ABDC" "ABC")
+
+(define
+    (diffrence_percent hamming str)
+    (* (/ hamming (string-length str)) 100)
+)
+
+
+(diffrence_percent (hamming_distance "Arthur" "adrian") "Arthur")

@@ -35,4 +35,9 @@
         (else "input must be list")
     )
 )
-(illu (tree_cunstructor some_list))
+
+;(illu (tree_cunstructor some_list))
+
+;(illu (tree_cunstructor (list)))
+(illu (tree_cunstructor (list 1)))
+;(illu (tree_cunstructor (list 1 2 3 4 5 6 7)))

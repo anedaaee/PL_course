@@ -8,4 +8,6 @@ list_sum [] = 0
 list_sum (x:xs) = 
     (sum_inside x) + (list_sum xs)
 
-main = print (list_sum [[9,8,7,6],[5,4,3],[2,1]])
+--main = print (list_sum [[],[],[]])
+--main = print (list_sum [[1],[],[5]])
+--main = print (list_sum [[],[1,2,3],[5]])

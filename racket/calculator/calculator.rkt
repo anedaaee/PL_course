@@ -87,13 +87,13 @@
 
 (define (Ra_loop number farja result)
     (cond 
-        ((<= (expt (+ 0.01 result ) farja ) number) (Ra_loop number farja (+  0.01 result)))
-        (else  (/(round (* result 100)) 100))
+        ((<= (expt (+ 0.001 result ) farja ) number) (Ra_loop number farja (+  0.001 result)))
+        (else  (/(round (* result 1000)) 1000))
     )
 )
 
 (define (Ra number farja)
-    (Ra_loop number  farja 0.01)
+    (Ra_loop number  farja 0.001)
 )
 
 (define (calculator operator first_param second_param)
@@ -102,7 +102,7 @@
         ((eq? operator '-) (- first_param second_param))
         ((eq? operator '*) (* first_param second_param))
         ((eq? operator '/) (/ first_param second_param))
-        ((eq? operator '^) (exp first_param second_param))
+        ((eq? operator '^) (expt first_param second_param))
         ((eq? operator 'Ra) (Ra first_param second_param))
         ((eq? operator 'De) (derivato first_param second_param))
         ((eq? operator 'In) (integral first_param second_param))
@@ -123,4 +123,25 @@
 
 ;;; (Ra 27 3)
 
-(simplify(calculator 'In '(- 6 (- (* 3 (^ x 3)) (* (/ 4 2) (^ x 5)))) 'x))
+;(simplify(calculator 'In '(- 6 (- (* 3 (^ x 3)) (* (/ 4 2) (^ x 5)))) 'x))
+(simplify(calculator '+ 3 2))
+(simplify(calculator '- 3 2))
+(simplify(calculator '* 3 2))
+(simplify(calculator '/ 3 2))
+(simplify(calculator '^ 3 2))
+
+
+
+(simplify(calculator 'Ra 16 2))
+(simplify(calculator 'Ra 27 3))
+(simplify(calculator 'Ra 15 2))
+
+(simplify(calculator 'De '5 'x))
+(simplify(calculator 'De '(- (+ x x) x) 'x))
+(simplify(calculator 'De '(* y x) 'x))
+(simplify(calculator 'De '(^ x 5) 'x))
+
+
+(simplify(calculator 'In '(+ (^ x 2) (^ x 1)) 'x))
+(simplify(calculator 'In '(^ 2 x) 'x))
+(simplify(calculator 'In '(^ e (* 2 x)) 'x))
