@@ -13,8 +13,8 @@ filter_tupple_string_list ((str,len):tuple_string_ls_tail) limit =
         else (filter_tupple_string_list tuple_string_ls_tail limit)
     
 
---main = print(filter_tupple_string_list (map_input_create_tupple ["ali","nedaaee","oskooee","seyyed"]) 5)
-
---main = print(filter_tupple_string_list (map_input_create_tupple ["123", "1234", "12", "12345"]) 1)
---main = print(filter_tupple_string_list (map_input_create_tupple ["123", "1234", "12", "12345"]) 3)
-main = print(filter_tupple_string_list (map_input_create_tupple ["123", "1234", "12", "12345"]) 5)
+main = do
+    print(filter_tupple_string_list (map_input_create_tupple ["ali","nedaaee","oskooee","seyyed"]) 5)
+    print(filter_tupple_string_list (map_input_create_tupple ["123", "1234", "12", "12345"]) 1)
+    print(filter_tupple_string_list (map_input_create_tupple ["123", "1234", "12", "12345"]) 3)
+    print(filter_tupple_string_list (map_input_create_tupple ["123", "1234", "12", "12345"]) 5)

@@ -6,6 +6,7 @@ fac (Just number) =
     else
         Just(foldr (*) 1 [1..number])
 
---main = print(fac (Just 0))
---main = print(fac (Just 1))
-main = print(fac (Just 5))
+main = do 
+    print(fac (Just 0))
+    print(fac (Just 1))
+    print(fac (Just 5))

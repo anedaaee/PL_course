@@ -16,6 +16,7 @@ quick_sort [] = []
 quick_sort (pivot:list) = 
     quick_sort (get_samller pivot list) ++ [pivot] ++ (get_greater pivot list)
 
---main = print (quick_sort [1])
---main = print (quick_sort [2,7,3,4,6,5,1])
---main = print (quick_sort [10,1,2,3,4,5])
+main = do
+    print (quick_sort [1])
+    print (quick_sort [2,7,3,4,6,5,1])
+    print (quick_sort [10,1,2,3,4,5])

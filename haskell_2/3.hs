@@ -5,9 +5,10 @@ sum_func Nothing num2   = num2
 sum_func (Just num1) (Just num2) = Just ( num1 + num2 )
 
 
---main = print(sum_func Nothing Nothing)
---main = print(sum_func Nothing (Just 5))
---main = print(sum_func (Just 3) Nothing)
---main = print(sum_func (Just 7) (Just 8))
+main = do 
+    print(sum_func Nothing Nothing)
+    print(sum_func Nothing (Just 5))
+    print(sum_func (Just 3) Nothing)
+    print(sum_func (Just 7) (Just 8))
 
 

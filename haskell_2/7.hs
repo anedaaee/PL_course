@@ -20,9 +20,10 @@ erarosthenes number =
     erarosthenes_start [2..number] number
 
 --main = print(erarosthenes 121)
---main = print(erarosthenes 2)
---main = print(erarosthenes 3)
---main = print(erarosthenes 4)
---main = print(erarosthenes 30)
---main = print(erarosthenes 100)
+main = do 
+    print(erarosthenes 2)
+    print(erarosthenes 3)
+    print(erarosthenes 4)
+    print(erarosthenes 30)
+    print(erarosthenes 100)
 

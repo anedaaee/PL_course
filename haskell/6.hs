@@ -25,8 +25,9 @@ gen_prime number =
     (gen_prime_rec number 2 [])
 
 
---main = print (gen_prime 2)
---main = print (gen_prime 3)
---main = print (gen_prime 4)
---main = print (gen_prime 30)
---main = print (gen_prime 100)
+main = do 
+    print (gen_prime 2)
+    print (gen_prime 3)
+    print (gen_prime 4)
+    print (gen_prime 30)
+    print (gen_prime 100)
